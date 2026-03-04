@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>KSTAR</title>
+<style>
+body {
+  font-family: Arial;
+  background: linear-gradient(to right, #ff9ad5, #a18cd1);
+  color: white;
+  text-align: center;
+}
+.container {
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  margin: 20px auto;
+  width: 300px;
+  border-radius: 15px;
+}
+button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+input, select {
+  padding: 5px;
+  margin: 5px;
+}
+</style>
+</head>
+<body>
+
+<h1>🌟 KSTAR 🌟</h1>
+
+<div class="container" id="signup">
+  <h2>Sign Up</h2>
+  <input id="username" placeholder="Username"><br>
+  <input id="displayname" placeholder="Display Name"><br>
+  <input id="birthday" type="date"><br>
+  <input id="country" placeholder="Country"><br>
+  <input id="email" placeholder="Email (Optional)"><br>
+  <button onclick="startGame()">Start</button>
+</div>
+
+<div class="container" id="game" style="display:none;">
+  <h2 id="welcome"></h2>
+  <p>KMoney: <span id="kmoney">0</span></p>
+  <p>Coach: <span id="coachName">None</span></p>
+  
+  <button onclick="chooseCoach()">Choose Coach</button>
+  <button onclick="sing()">Sing Lesson</button>
+  <button onclick="openBlindBox()">Open Blind Box (1000)</button>
+  <button onclick="birthdayReward()">Birthday Reward</button>
+  <button onclick="newYearReward()">New Year Bonus</button>
+  
+  <h3>Inventory</h3>
+  <ul id="inventory"></ul>
+  
+  <h3>Ranking Stars</h3>
+  <p>Total Stars: <span id="stars">0</span></p>
+</div>
+
+<script>
+let kmoney = 1000;
+let stars = 0;
+let inventory = [];
+let coach = "None";
+
+function startGame() {
+  let username = document.getElementById("username").value;
+  let display = document.getElementById("displayname").value;
+  if(username === "" || display === "") {
+    alert("Fill required fields!");
+    return;
+  }
+  document.getElementById("signup").style.display = "none";
+  document.getElementById("game").style.display = "block";
+  document.getElementById("welcome").innerText = "Welcome " + display;
+  updateDisplay();
+}
+
+function updateDisplay() {
+  document.getElementById("kmoney").innerText = kmoney;
+  document.getElementById("stars").innerText = stars;
+  document.getElementById("coachName").innerText = coach;
+  let list = document.getElementById("inventory");
+  list.innerHTML = "";
+  inventory.forEach(item => {
+    let li = document.createElement("li");
+    li.innerText = item;
+    list.appendChild(li);
+  });
+}
+
+function chooseCoach() {
+  let choice = prompt("Choose Coach: Sweet / Power / Gyaru / Custom Blob");
+  if(choice) {
+    coach = choice;
+    updateDisplay();
+  }
+}
+
+function sing() {
+  let score = (Math.random() * 3).toFixed(1);
+  stars += parseFloat(score);
+  alert("You scored " + score + " stars!");
+  updateDisplay();
+}
+
+function openBlindBox() {
+  if(kmoney < 1000) {
+    alert("Not enough KMoney!");
+    return;
+  }
+  kmoney -= 1000;
+  let items = ["Sparkle Mic", "Gold Crown", "Firework Aura", "Bunny Outfit", "Stage Jacket"];
+  let item = items[Math.floor(Math.random() * items.length)];
+  inventory.push(item);
+  alert("You got: " + item);
+  updateDisplay();
+}
+
+function birthdayReward() {
+  kmoney += 1000;
+  inventory.push("Birthday Special Outfit");
+  alert("Birthday Reward! +1000 KMoney and Free Outfit!");
+  updateDisplay();
+}
+
+function newYearReward() {
+  kmoney += 2000;
+  alert("Happy New Year! +2000 KMoney!");
+  updateDisplay();
+}
+</script>
+
+</body>
+</html>
