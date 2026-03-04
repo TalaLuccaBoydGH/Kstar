@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="kstar-logo.png" width="500">
+  <img src="kstar-logo.png.png" width="500">
 </p>
 
 # 🎤 KSTAR 
