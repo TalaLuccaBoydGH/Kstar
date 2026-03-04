@@ -1,42 +1,57 @@
-# 🌟 KSTAR
+# 🎤✨ KSTAR ✨🎤
 
-KSTAR is a virtual idol simulation game where you train, perform, and grow your music career forever.
+> Train. Perform. Shine Forever.
 
-## 🎤 Features
+---
 
-- Create your profile (username, display name, birthday, country, optional email)
-- Earn KMoney 💰
-- Birthday rewards 🎂
-- New Year bonus 🎆
+## 🌟 About KSTAR
+
+KSTAR is a virtual idol simulation game where you create your profile, take vocal lessons, perform in concerts, earn KMoney, and grow your career forever.
+
+---
+
+## 🎮 Features
+
+- Profile creation (username, display name, birthday, country, optional email)
+- Starting 1000 KMoney 💰
+- Birthday reward (+1000 KMoney + free blind box outfit) 🎂
+- New Year bonus (+2000 KMoney) 🎆
 - Blind Box system 🎁
-- Vocal lessons with star ratings ⭐
-- Choose your own vocal coach (Sweet, Power, Gyaru, Custom Blob)
+- Vocal lessons with 0–3 star scoring ⭐
+- Choose your vocal coach:
+  - Sweet
+  - Power
+  - Gyaru
+  - Custom Blob
 - Inventory system
 - Forever progression ranking
+
+---
 
 ## 🐰 Seasonal Updates
 
 Every holiday includes:
 - Limited outfits
-- Special songs
+- Special event songs
 - Blind boxes
-- Event stages
+- Themed stages
 - Bonus rewards
 
-Examples:
+Planned Events:
 - Easter Update
 - Halloween Update
 - Christmas Update
-- New Year Countdown Event
+- New Year Countdown Concert
 
-## 🎮 Future Plans
+---
 
-- 3D Unity Version
+## 🚀 Future Goals
+
+- Full 3D Unity Version
 - Real microphone pitch detection
-- World map (mall, airport, concerts)
+- World exploration (mall, airport, concerts)
 - Custom chibi coach creator
-- Admin system
-- Account banning for rule violations
+- Admin panel
 - Global rankings
 
 ---
