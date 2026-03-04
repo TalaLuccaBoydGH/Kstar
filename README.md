@@ -3,7 +3,6 @@
 </p>
 
 # 🎤 KSTAR
-
 > Train. Perform. Shine Forever.
 
 ---
