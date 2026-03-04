@@ -2,7 +2,8 @@
   <img src="kstar-logo.png" width="500">
 </p>
 
-# 🎤 KSTAR
+# 🎤 KSTAR 
+
 > Train. Perform. Shine Forever.
 
 ---
